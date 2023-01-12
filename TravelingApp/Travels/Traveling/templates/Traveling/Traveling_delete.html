@@ -1,0 +1,14 @@
+{% extends 'Traveling_base.html' %}
+
+{% block content %}
+
+<h1>Delete</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <h3>Permanently delete: "{{ traveler.First_Name }} {{ traveler.Last_name }} Email: {{traveler.Email}} Phone: {{traveler.Phone_Number}}" ?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+        <button type="submit"><a href="{% url 'Traveling_update' traveler.id %}">Return</a></button>
+
+{% endblock %}

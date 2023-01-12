@@ -1,0 +1,13 @@
+{% extends 'Traveling_base.html' %}
+{% block content %}
+
+<h1>Travelers</h1>
+{% for traveler in travelers %}
+<h3>First name: {{ traveler.First_Name }}
+    - Last name: {{ traveler.Last_name }}
+    - Email: {{ traveler.Email }}
+    - Phone number: {{ traveler.Phone_Number }}
+    - <a href="{% url 'Traveling_details' traveler.id %}">Details</a></h3>
+
+{% endfor %}
+{% endblock %}

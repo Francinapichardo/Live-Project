@@ -1,0 +1,18 @@
+{% extends 'Traveling_base.html' %}
+
+{% block content %}
+
+<h1>Contact us</h1>
+<div class="Contact">
+    <p>Trip consultants <br>
+        If you're booking a trip or scheduled to travel in the next 60 days and have questions, call us.<p>
+        8:00 AM to 5:00 PM every weekday.</p>
+</div>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+
+{% endblock %}

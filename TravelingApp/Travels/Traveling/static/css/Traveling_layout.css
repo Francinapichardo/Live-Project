@@ -1,0 +1,174 @@
+/*Affects entire document */
+html {
+    scroll-behavior: smooth; /*This ensures that the page scrolling is smooth when the buttons on the nav bar is clicked */
+}
+
+body{
+    background: url(../img/background1.jpg)no-repeat 50% 50%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top:  500px; /*This is spacer before the Main title Logo*/
+    padding-bottom: 500px; /*This is spacer after the Main title Logo*/
+    overflow-x: hidden; /* This prevents the horizontal scroll bar from appearing when the quote is hovered over */
+    color: #fff;
+}
+
+/* This section contributes to the fade effect for the page that occurs when the page is loaded */
+body.fade-out {
+    opacity: .1; /* This sets the level of opacity at the start of page load */
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase; /*capitalizing all h1 headings */
+    font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
+    text-align: center; /* Centering all h1 elements */
+    margin-top: 3%; /* Adds a small margin above h1 elements */
+}
+
+/* Heading 1 element hover effect */
+h1:hover {
+    filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
+    transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
+    transition: transform 1s; /* This causes the transformation to last 1 second */
+}
+
+/* Paragraph elements */
+p {
+    font-family: cursive, Extra Bold;
+    text-align: justify; /* This justifies the text within paragraph elements */
+    font-size: 1.7vw; /* Relative font sizing equal to 2.5% of the viewport width */
+    padding-left: 1vw; /* Relative padding equal to 1% of the viewport width */
+    padding-right: 1vw; /* Relative padding equal to 1% of the viewport width */
+    text-align: center; /* This center aligns the text */
+    margin-top: 2%;
+}
+
+/* Paragraph element hover effect */
+p:hover {
+    transition: transform 1s; /* This makes the transform effect last 1 second */
+	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
+}
+
+/*Styling for footer element */
+#block-footer {
+    clear: both;
+    display: flex;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+}
+
+#block-footer a, #block-footer p {
+    color: white;
+    padding: 8px 8px;
+	font-size: 14px;
+    line-height: 8px;
+}
+
+#footer-left {
+    width: 40%;
+    text-align: left;
+}
+
+#block-footer{
+    float:left;
+    clear:both;
+    width:100%;
+}
+
+/***** End of General Styling *****/
+
+/***** Navbar Styling *****/
+.Navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 0; /* This ensures no space is displayed above the navbar */
+    background-color: RGB(196, 160, 153) ; /* This colors the navbar */
+    width: 99%; /* This makes the navbar span the entire width of the page */
+    z-index: 1; /* This ensures other elements don't display over the navbar */
+    -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
+    animation: moveNav 5s; /* This makes the moveNav animation last 5 seconds */
+    text-align: center;
+}
+
+/* The animation effect for moving the nav bar in from above the left of the screen on page load */
+@keyframes moveNav {
+    from {left: -100vw;} /* The navbar is starting off screen to the left */
+    to { left: 1vw;} /* This moves the navbar into place on the screen */
+}
+
+/*Navbar Links */
+.Navbar a {
+    float: center; /* This specifies that the text floats on the center on the navbar */
+    display: inline-block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+    color: white; /* This is the font color for text on our navbar */
+    padding: .75vw 1vw; /* This adds padding around our text */
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+    font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+    font-size: 1.5vw; /* This specifies the font size for text on our navbar */
+    text-align: center; /* This centers the text within its container */
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+    -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
+    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */
+}
+
+/* The animation effect for moving the nav bar links in from above the top of the screen on page load */
+@keyframes moveNavText {
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
+}
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
+}
+
+/*Navbar hover effects */
+.Navbar a:hover {
+     background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
+     color: black; /* This defines the font color that will display when navbar a elements are hovered over */
+     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+     cursor: pointer;
+     transition: 0.5s ease-in; /* Creates a smooth transition for the hover trigger */
+}
+/***** End of Navbar Styling *****/
+
+/* General styling for all buttons */
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: .2vw; /* Adds slight spacing between the letters */
+    font-size: 1.5vw; /* Relative sizing of text */
+    font-weight: bold;
+    padding: 1.1vw; /* Adds padding to the text in the button */
+    cursor: pointer; /* Changes the cursor to pointer over button elements */
+    height: auto; /* Allows the height to be resized depending on the content showing */
+    position: absolute;
+    left: 40%;
+    margin-left: 50px;
+}
+
+/* Hover effect for contact and submit buttons */
+button:hover, .form-container .btn:hover {
+    color: white; /* This makes the text in the buttons white when hovered over */
+    background-color: black; /* The background of the button changes to black when hovered over */
+    transition-duration: 1s; /* This makes the transition last 1 second */
+    -webkit-transition-duration: 1s; /* For Safari 4.0-8.0 */
+}
+
+
+
+
+
+
+
