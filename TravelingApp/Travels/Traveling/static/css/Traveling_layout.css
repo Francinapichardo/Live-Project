@@ -107,7 +107,6 @@ p:hover {
 
 /*Navbar Links */
 .Navbar a {
-    float: center; /* This specifies that the text floats on the center on the navbar */
     display: inline-block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
     color: white; /* This is the font color for text on our navbar */
     padding: .75vw 1vw; /* This adds padding around our text */
